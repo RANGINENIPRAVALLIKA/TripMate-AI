@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.expense; import jakarta.validation.constraints.*; import java.math.*; import java.time.*; public record UpdateExpenseRequest(@NotBlank @Size(max=200) String title,@NotNull @PositiveOrZero BigDecimal amount,@NotNull LocalDate expenseDate,Long categoryId) {}

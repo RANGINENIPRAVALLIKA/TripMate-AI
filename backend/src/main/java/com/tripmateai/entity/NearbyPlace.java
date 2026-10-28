@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*; import java.math.BigDecimal;
+@Entity @Table(name="nearby_places",indexes=@Index(name="idx_nearby_places_destination",columnList="destination_id")) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class NearbyPlace extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="destination_id",nullable=false) @ToString.Exclude private Destination destination; @NotBlank @Size(max=200) @Column(nullable=false,length=200) private String name; @Size(max=100) @Column(length=100) private String category; @Size(max=255) private String address; @DecimalMin("-90.0") @DecimalMax("90.0") @Column(precision=10,scale=7) private BigDecimal latitude; @DecimalMin("-180.0") @DecimalMax("180.0") @Column(precision=10,scale=7) private BigDecimal longitude; }

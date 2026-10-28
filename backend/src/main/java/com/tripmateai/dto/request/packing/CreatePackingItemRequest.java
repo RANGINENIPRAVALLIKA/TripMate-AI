@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.packing; import jakarta.validation.constraints.*; public record CreatePackingItemRequest(@NotBlank @Size(max=200) String name,@NotNull @Min(1) Integer quantity,@NotBlank @Size(max=100) String category) {}

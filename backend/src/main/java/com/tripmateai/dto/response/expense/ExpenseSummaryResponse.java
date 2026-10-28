@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.expense; import java.math.*; import java.util.Map; public record ExpenseSummaryResponse(BigDecimal totalSpent,BigDecimal remainingBudget,long expenseCount,Map<String,BigDecimal> totalsByCategory) {}

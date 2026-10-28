@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*; import java.math.BigDecimal;
+@Entity @Table(name="hotels",indexes=@Index(name="idx_hotels_destination",columnList="destination_id")) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class Hotel extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="destination_id",nullable=false) @ToString.Exclude private Destination destination; @NotBlank @Size(max=200) @Column(nullable=false,length=200) private String name; @Size(max=255) private String address; @DecimalMin("0.0") private BigDecimal rating; @DecimalMin("0.00") @Column(name="price_per_night",precision=12,scale=2) private BigDecimal pricePerNight; @Size(max=2048) @Column(name="image_url",length=2048) private String imageUrl; }

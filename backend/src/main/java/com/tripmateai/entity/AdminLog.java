@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*;
+@Entity @Table(name="admin_logs",indexes={@Index(name="idx_admin_logs_admin_created",columnList="admin_id,created_at"),@Index(name="idx_admin_logs_action",columnList="action")}) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class AdminLog extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="admin_id",nullable=false) @ToString.Exclude private User admin; @NotBlank @Size(max=100) @Column(nullable=false,length=100) private String action; @Size(max=100) @Column(name="target_type",length=100) private String targetType; @Column(name="target_id") private Long targetId; @Size(max=5000) @Column(columnDefinition="TEXT") private String details; }

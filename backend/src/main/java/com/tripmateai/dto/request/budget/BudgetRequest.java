@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.budget; import jakarta.validation.constraints.*; import java.math.BigDecimal; public record BudgetRequest(@NotNull @Positive Long tripId,@NotNull @PositiveOrZero BigDecimal totalBudget,@PositiveOrZero BigDecimal allocatedAmount,String currency) {}

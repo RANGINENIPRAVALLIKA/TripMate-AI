@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.budget; import jakarta.validation.constraints.*; import java.math.BigDecimal; public record UpdateBudgetRequest(@NotNull @PositiveOrZero BigDecimal totalBudget,@PositiveOrZero BigDecimal allocatedAmount,@Pattern(regexp="^[A-Z]{3}$",message="Currency must be a 3-letter ISO code") String currency) {}

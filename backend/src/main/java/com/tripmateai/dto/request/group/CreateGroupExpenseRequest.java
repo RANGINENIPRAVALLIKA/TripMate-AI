@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.group; import jakarta.validation.constraints.*; import java.math.*; import java.util.*; public record CreateGroupExpenseRequest(@NotBlank @Size(max=200) String description,@NotNull @Positive BigDecimal amount,@NotNull @Positive Long paidByMemberId,@NotEmpty List<@NotNull @Positive Long> participantMemberIds) {}

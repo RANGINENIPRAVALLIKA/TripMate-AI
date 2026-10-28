@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.trip; import jakarta.validation.constraints.*; import java.math.BigDecimal; import java.time.LocalDate; public record UpdateTripRequest(@NotBlank @Size(max=200) String tripName,@NotNull LocalDate startDate,@NotNull LocalDate endDate,@PositiveOrZero BigDecimal budget,@Min(1) Integer numberOfTravelers) {}

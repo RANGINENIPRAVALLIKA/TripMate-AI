@@ -1,0 +1,1 @@
+package com.tripmateai.mapper; import com.tripmateai.entity.Itinerary; import com.tripmateai.dto.response.itinerary.ItineraryResponse; public final class ItineraryMapper {private ItineraryMapper(){} public static ItineraryResponse toResponse(Itinerary e){return e==null?null:new ItineraryResponse(e.getId(),e.getTrip().getId(),e.getDayNumber(),e.getTitle(),e.getDescription());}}

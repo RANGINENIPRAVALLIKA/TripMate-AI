@@ -1,0 +1,1 @@
+package com.tripmateai.repository; import com.tripmateai.entity.GroupExpenseShare; import org.springframework.data.jpa.repository.JpaRepository; public interface GroupExpenseShareRepository extends JpaRepository<GroupExpenseShare,Long> { }

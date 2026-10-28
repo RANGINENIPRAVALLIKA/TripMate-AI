@@ -1,0 +1,2 @@
+import client,{apiData} from '../api/client'
+export const packingService={get:id=>apiData(client.get(`/trips/${id}/packing`)),add:(id,body)=>apiData(client.post(`/trips/${id}/packing`,body)),update:(id,itemId,body)=>apiData(client.put(`/trips/${id}/packing/${itemId}`,body)),toggle:(id,itemId)=>apiData(client.patch(`/trips/${id}/packing/${itemId}/toggle`)),remove:(id,itemId)=>apiData(client.delete(`/trips/${id}/packing/${itemId}`)),generate:(id,preferences)=>apiData(client.post(`/trips/${id}/packing/generate`,{preferences}))}

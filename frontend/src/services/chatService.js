@@ -1,0 +1,1 @@
+import client,{apiData}from'../api/client';export const chatService={history:tripId=>apiData(client.get('/chat/history',{params:tripId?{tripId}:{}})),send:body=>apiData(client.post('/chat/message',body))}

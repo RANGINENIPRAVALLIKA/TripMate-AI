@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.auth; import jakarta.validation.constraints.*; public record RegisterRequest(@NotBlank(message="Full name is required") @Size(max=120) String fullName,@NotBlank @Email String email,@NotBlank @Size(min=8,max=100) String password,@Size(max=30) String phoneNumber) {}

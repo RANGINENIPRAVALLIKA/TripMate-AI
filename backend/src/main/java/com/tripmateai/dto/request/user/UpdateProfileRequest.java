@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.user; import jakarta.validation.constraints.*; public record UpdateProfileRequest(@NotBlank @Size(max=120) String fullName,@Size(max=30) String phoneNumber,@Size(max=2048) String profileImage) {}

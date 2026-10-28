@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*;
+@Entity @Table(name="chat_history",indexes={@Index(name="idx_chat_user_created",columnList="user_id,created_at"),@Index(name="idx_chat_trip",columnList="trip_id")}) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class ChatHistory extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id",nullable=false) @ToString.Exclude private User user; @ManyToOne(fetch=FetchType.LAZY) @JoinColumn(name="trip_id") @ToString.Exclude private Trip trip; @NotBlank @Size(max=10000) @Column(nullable=false,columnDefinition="TEXT") private String prompt; @NotBlank @Size(max=20000) @Column(nullable=false,columnDefinition="TEXT") private String response; @Size(max=100) @Column(length=100) private String model; }

@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*; import java.time.LocalDate;
+@Entity @Table(name="analytics",uniqueConstraints=@UniqueConstraint(name="uk_analytics_user_metric_date",columnNames={"user_id","metric_name","metric_date"}),indexes=@Index(name="idx_analytics_metric_date",columnList="metric_name,metric_date")) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class Analytics extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY) @JoinColumn(name="user_id") @ToString.Exclude private User user; @Size(max=100) @Column(name="metric_name",nullable=false,length=100) private String metricName; @NotNull @Column(name="metric_date",nullable=false) private LocalDate metricDate; @Column(columnDefinition="JSON") private String payload; }

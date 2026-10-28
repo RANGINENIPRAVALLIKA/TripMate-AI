@@ -1,0 +1,1 @@
+package com.tripmateai.mapper; import com.tripmateai.dto.response.expense.ExpenseResponse; import com.tripmateai.entity.Expense; public final class ExpenseMapper {private ExpenseMapper(){} public static ExpenseResponse toResponse(Expense e){return e==null?null:new ExpenseResponse(e.getId(),e.getTitle(),e.getAmount(),e.getExpenseDate(),e.getStatus().name());}}

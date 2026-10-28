@@ -1,0 +1,1 @@
+package com.tripmateai.repository; import com.tripmateai.entity.Role; import com.tripmateai.enums.RoleName; import org.springframework.data.jpa.repository.JpaRepository; import java.util.Optional; public interface RoleRepository extends JpaRepository<Role,Long> { Optional<Role> findByName(RoleName name); }

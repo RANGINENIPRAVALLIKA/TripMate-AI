@@ -1,0 +1,2 @@
+import {Button,Card} from '../ui'
+export default function JournalEntryCard({entry,onView,onEdit,onDelete}){return <Card><small>{entry.journalDate}</small><h2>{entry.title}</h2><div className="actions"><Button variant="secondary" onClick={onView}>View</Button><button className="link-button" onClick={onEdit}>Edit</button><button className="link-button danger" onClick={onDelete}>Delete</button></div></Card>}

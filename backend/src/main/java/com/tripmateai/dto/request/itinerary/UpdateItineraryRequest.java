@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.itinerary; import jakarta.validation.constraints.*; public record UpdateItineraryRequest(@NotNull @Min(1) Integer dayNumber,@Size(max=300) String title,@Size(max=5000) String description) {}

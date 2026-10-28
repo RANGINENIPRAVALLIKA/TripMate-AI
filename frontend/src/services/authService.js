@@ -1,0 +1,2 @@
+import client, { apiData } from '../api/client'
+export const authService = { register: (body) => apiData(client.post('/auth/register', body)), login: (body) => apiData(client.post('/auth/login', body)), me: () => apiData(client.get('/auth/me')), logout: (refreshToken) => client.post('/auth/logout', { refreshToken }), forgotPassword: (email) => apiData(client.post('/auth/forgot-password', { email })), resetPassword: (body) => apiData(client.post('/auth/reset-password', body)), changePassword: (body) => apiData(client.post('/auth/change-password', body)) }

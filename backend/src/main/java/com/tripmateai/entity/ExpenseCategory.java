@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import com.tripmateai.enums.ExpenseCategoryType; import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*;
+@Entity @Table(name="expense_categories",uniqueConstraints=@UniqueConstraint(name="uk_category_owner_type",columnNames={"user_id","category_type"})) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class ExpenseCategory extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY) @JoinColumn(name="user_id") @ToString.Exclude private User user; @Enumerated(EnumType.STRING) @Column(name="category_type",nullable=false,length=30) private ExpenseCategoryType categoryType; @NotBlank @Size(max=100) @Column(nullable=false,length=100) private String name; @Size(max=7) @Column(length=7) private String color; }

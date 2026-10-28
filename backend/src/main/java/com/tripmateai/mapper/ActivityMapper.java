@@ -1,0 +1,1 @@
+package com.tripmateai.mapper; import com.tripmateai.entity.Activity; import com.tripmateai.dto.response.activity.ActivityResponse; public final class ActivityMapper {private ActivityMapper(){} public static ActivityResponse toResponse(Activity e){return e==null?null:new ActivityResponse(e.getId(),e.getItinerary().getId(),e.getTitle(),e.getType(),e.getSortOrder());}}

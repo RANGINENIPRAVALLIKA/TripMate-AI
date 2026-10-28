@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.user; import java.time.LocalDateTime; import java.util.Set; public record UserProfileResponse(Long id,String fullName,String email,String phoneNumber,String profileImage,boolean verified,Set<String> roles,LocalDateTime createdAt) {}

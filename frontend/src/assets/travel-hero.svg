@@ -1,0 +1,20 @@
+<svg width="960" height="1080" viewBox="0 0 960 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="80" y1="50" x2="900" y2="1050" gradientUnits="userSpaceOnUse"><stop stop-color="#0D2B66"/><stop offset=".54" stop-color="#185EAD"/><stop offset="1" stop-color="#F7835F"/></linearGradient>
+    <linearGradient id="plane" x1="180" y1="260" x2="730" y2="580" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#C8E3FF"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <rect width="960" height="1080" rx="56" fill="url(#sky)"/>
+  <circle cx="120" cy="140" r="110" fill="#fff" fill-opacity=".09" filter="url(#blur)"/><circle cx="820" cy="160" r="150" fill="#9BD8FF" fill-opacity=".16" filter="url(#blur)"/>
+  <path d="M-30 865C135 758 248 798 383 900C534 1014 708 960 990 760V1080H-30V865Z" fill="#071C45" fill-opacity=".5"/>
+  <path d="M-20 755C130 674 246 688 380 772C510 854 699 830 980 638" stroke="#9DE0FF" stroke-opacity=".35" stroke-width="4" stroke-dasharray="12 14"/>
+  <g transform="rotate(-19 490 460)">
+    <path d="M182 475C182 437 211 405 248 402L586 376C622 373 658 394 673 427L694 496C702 515 689 536 669 537L586 542L458 674C443 689 418 675 423 655L459 539L270 546C231 548 198 522 186 486L182 475Z" fill="url(#plane)"/>
+    <path d="M273 546L397 540L334 676C328 687 311 681 311 669L313 544L273 546Z" fill="#FF9B75"/>
+    <path d="M535 379L585 375C621 372 658 393 673 427L694 496C700 510 694 521 683 529L585 535L535 379Z" fill="#DDEFFF"/>
+    <circle cx="561" cy="447" r="13" fill="#0D55A2"/><circle cx="517" cy="451" r="13" fill="#0D55A2"/><circle cx="473" cy="455" r="13" fill="#0D55A2"/>
+  </g>
+  <g fill="#fff" fill-opacity=".85"><path d="M123 374C123 349 143 329 168 329C189 329 207 343 212 362C216 361 221 360 226 360C251 360 271 380 271 405H123V374Z"/><path d="M665 255C665 230 685 210 710 210C731 210 749 224 754 243C758 242 763 241 768 241C793 241 813 261 813 286H665V255Z"/></g>
+  <g transform="translate(665 718)"><path d="M0 52C0 23 24 0 53 0C82 0 106 23 106 52C106 91 53 137 53 137C53 137 0 91 0 52Z" fill="#FF8B66"/><circle cx="53" cy="52" r="19" fill="white"/></g>
+  <text x="78" y="914" fill="white" font-family="Arial, sans-serif" font-size="34" font-weight="700">Every journey starts with a plan.</text>
+</svg>

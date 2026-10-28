@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.activity; import com.tripmateai.enums.ActivityType; import jakarta.validation.constraints.*; import java.time.LocalTime; public record CreateActivityRequest(@NotNull @Positive Long itineraryId,@NotBlank String title,@NotNull ActivityType type,@NotNull @Min(1) Integer sortOrder,LocalTime startTime,LocalTime endTime) {}

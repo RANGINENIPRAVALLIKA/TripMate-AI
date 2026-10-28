@@ -1,0 +1,1 @@
+package com.tripmateai.service; import com.tripmateai.dto.request.ai.AiTripPlanRequest; import com.tripmateai.dto.response.ai.AiTripPlanResponse; public interface AiTripPlannerService {AiTripPlanResponse generate(AiTripPlanRequest request);}

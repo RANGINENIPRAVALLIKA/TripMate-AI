@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.journal; import java.time.*; import java.util.*; public record JournalEntryDetailResponse(Long id,LocalDate journalDate,String title,String content,List<JournalPhotoResponse> photos) {}

@@ -1,0 +1,3 @@
+package com.tripmateai.controller;
+import com.tripmateai.dto.response.ApiResponse; import com.tripmateai.dto.response.admin.AdminDashboardResponse; import com.tripmateai.service.AdminService; import com.tripmateai.util.ResponseUtils; import lombok.RequiredArgsConstructor; import org.springframework.http.ResponseEntity; import org.springframework.web.bind.annotation.*;
+@RestController @RequestMapping("/admin") @RequiredArgsConstructor public class AdminController { private final AdminService service; @GetMapping("/dashboard") public ResponseEntity<ApiResponse<AdminDashboardResponse>> dashboard(){return ResponseUtils.success(service.getDashboard(),"Admin dashboard retrieved");} }

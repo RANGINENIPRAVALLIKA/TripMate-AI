@@ -1,0 +1,1 @@
+package com.tripmateai.repository; import com.tripmateai.entity.*; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface GroupExpenseRepository extends JpaRepository<GroupExpense,Long> { List<GroupExpense> findByGroup(Group group); Optional<GroupExpense> findByIdAndGroup(Long id,Group group); }

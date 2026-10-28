@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.favorite; import com.tripmateai.enums.FavoriteTargetType; import jakarta.validation.constraints.*; public record CreateFavoriteRequest(@NotNull FavoriteTargetType targetType,@NotNull @Positive Long targetId) {}

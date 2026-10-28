@@ -1,0 +1,1 @@
+package com.tripmateai.repository; import com.tripmateai.entity.*; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface ActivityRepository extends JpaRepository<Activity,Long> { Optional<Activity> findByIdAndItinerary(Long id,Itinerary itinerary); List<Activity> findByItineraryOrderBySortOrderAsc(Itinerary itinerary); }

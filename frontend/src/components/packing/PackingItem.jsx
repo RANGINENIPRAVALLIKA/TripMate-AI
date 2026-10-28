@@ -1,0 +1,2 @@
+import {Button,Card} from '../ui'
+export default function PackingItem({item,onToggle,onEdit,onDelete}){return <Card className={`packing-item ${item.packed?'packed':''}`}><button className="check" onClick={onToggle} aria-label={`Mark ${item.name} ${item.packed?'unpacked':'packed'}`}>{item.packed?'☑':'☐'}</button><div className="packing-copy"><strong>{item.name}</strong><small>{item.category} · {item.quantity}</small></div><div><button className="link-button" onClick={onEdit}>Edit</button><button className="link-button danger" onClick={onDelete}>Delete</button></div></Card>}

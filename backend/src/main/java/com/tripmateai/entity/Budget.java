@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*; import java.math.BigDecimal;
+@Entity @Table(name="budgets") @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class Budget extends BaseEntity { @OneToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="trip_id",nullable=false,unique=true) @ToString.Exclude private Trip trip; @NotNull @DecimalMin("0.00") @Column(name="total_budget",nullable=false,precision=12,scale=2) private BigDecimal totalBudget; @DecimalMin("0.00") @Column(name="allocated_amount",precision=12,scale=2) private BigDecimal allocatedAmount=BigDecimal.ZERO; @DecimalMin("0.00") @Column(name="spent_amount",precision=12,scale=2) private BigDecimal spentAmount=BigDecimal.ZERO; @Column(length=3,nullable=false) private String currency="INR"; }

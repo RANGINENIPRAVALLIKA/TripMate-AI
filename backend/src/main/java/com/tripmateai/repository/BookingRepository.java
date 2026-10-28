@@ -1,0 +1,1 @@
+package com.tripmateai.repository; import com.tripmateai.entity.*; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface BookingRepository extends JpaRepository<Booking,Long> { List<Booking> findByTripOrderByStartAtAsc(Trip trip); Optional<Booking> findByIdAndTrip(Long id,Trip trip); }

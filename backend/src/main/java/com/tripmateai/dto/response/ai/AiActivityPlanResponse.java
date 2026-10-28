@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.ai; import java.math.BigDecimal; import java.time.LocalTime; public record AiActivityPlanResponse(String title,String description,String location,LocalTime startTime,LocalTime endTime,BigDecimal estimatedCost) {}

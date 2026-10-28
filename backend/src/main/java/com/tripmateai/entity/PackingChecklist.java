@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*; import java.util.*;
+@Entity @Table(name="packing_checklists",uniqueConstraints=@UniqueConstraint(name="uk_checklist_trip_user",columnNames={"trip_id","user_id"})) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class PackingChecklist extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="trip_id",nullable=false) @ToString.Exclude private Trip trip; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id",nullable=false) @ToString.Exclude private User user; @NotBlank @Size(max=150) @Column(nullable=false,length=150) private String name; @OneToMany(mappedBy="checklist",fetch=FetchType.LAZY,cascade=CascadeType.ALL,orphanRemoval=true) @ToString.Exclude private List<PackingItem> items=new ArrayList<>(); }

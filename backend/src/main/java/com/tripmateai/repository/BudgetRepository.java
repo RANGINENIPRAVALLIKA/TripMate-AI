@@ -1,0 +1,1 @@
+package com.tripmateai.repository; import com.tripmateai.entity.*; import org.springframework.data.jpa.repository.JpaRepository; import java.util.Optional; public interface BudgetRepository extends JpaRepository<Budget,Long> { Optional<Budget> findByTrip(Trip trip); boolean existsByTrip(Trip trip); }

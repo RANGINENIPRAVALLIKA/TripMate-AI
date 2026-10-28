@@ -1,0 +1,2 @@
+import client,{apiData} from '../api/client'
+export const bookingService={list:id=>apiData(client.get(`/trips/${id}/bookings`)),get:(id,bookingId)=>apiData(client.get(`/trips/${id}/bookings/${bookingId}`)),create:(id,body)=>apiData(client.post(`/trips/${id}/bookings`,body)),update:(id,bookingId,body)=>apiData(client.put(`/trips/${id}/bookings/${bookingId}`,body)),remove:(id,bookingId)=>apiData(client.delete(`/trips/${id}/bookings/${bookingId}`))}

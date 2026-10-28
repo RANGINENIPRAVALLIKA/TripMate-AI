@@ -1,0 +1,1 @@
+import{Card}from'../ui';import RatingStars from'./RatingStars';export default function ReviewSummary({summary}){return <Card><small>AVERAGE RATING</small><div className="summary-rating"><strong>{summary.averageRating}</strong><RatingStars value={Math.round(Number(summary.averageRating))}/></div><p>{summary.totalReviews} review{summary.totalReviews===1?'':'s'}</p></Card>}

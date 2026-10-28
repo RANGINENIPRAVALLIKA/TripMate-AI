@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*; import java.math.BigDecimal;
+@Entity @Table(name="group_expense_shares",uniqueConstraints=@UniqueConstraint(name="uk_expense_share_member",columnNames={"group_expense_id","group_member_id"})) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class GroupExpenseShare extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="group_expense_id",nullable=false) @ToString.Exclude private GroupExpense groupExpense; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="group_member_id",nullable=false) @ToString.Exclude private GroupMember groupMember; @NotNull @DecimalMin("0.00") @Column(nullable=false,precision=12,scale=2) private BigDecimal amount; @Column(nullable=false) private boolean settled; }

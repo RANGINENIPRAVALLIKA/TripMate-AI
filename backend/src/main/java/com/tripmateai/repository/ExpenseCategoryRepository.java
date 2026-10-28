@@ -1,0 +1,1 @@
+package com.tripmateai.repository; import com.tripmateai.entity.ExpenseCategory; import org.springframework.data.jpa.repository.JpaRepository; public interface ExpenseCategoryRepository extends JpaRepository<ExpenseCategory,Long> { }

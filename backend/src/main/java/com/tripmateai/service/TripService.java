@@ -1,0 +1,3 @@
+package com.tripmateai.service;
+import com.tripmateai.dto.request.trip.*; import com.tripmateai.dto.response.trip.*; import org.springframework.data.domain.Page;
+public interface TripService { TripResponse createTrip(CreateTripRequest request); Page<TripSummaryResponse> getMyTrips(int page,int size,String sort); TripResponse getTripById(Long id); TripResponse updateTrip(Long id,UpdateTripRequest request); void deleteTrip(Long id); TripResponse duplicateTrip(Long id,DuplicateTripRequest request); void saveTrip(Long id); void unsaveTrip(Long id); Page<TripSummaryResponse> getSavedTrips(int page,int size); Page<TripSummaryResponse> getPreviousTrips(int page,int size); }

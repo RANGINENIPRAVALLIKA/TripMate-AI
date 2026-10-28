@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.expense; import jakarta.validation.constraints.*; import java.math.*; import java.time.*; public record ExpenseRequest(@NotNull @Positive Long tripId,@NotBlank String title,@NotNull @PositiveOrZero BigDecimal amount,@NotNull LocalDate expenseDate,Long categoryId) {}

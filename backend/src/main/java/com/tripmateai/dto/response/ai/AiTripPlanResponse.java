@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.ai; import com.tripmateai.dto.response.trip.TripResponse; import java.util.List; public record AiTripPlanResponse(TripResponse trip,List<AiItineraryDayResponse> itinerary) {}

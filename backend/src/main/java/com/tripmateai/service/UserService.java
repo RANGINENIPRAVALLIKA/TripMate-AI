@@ -1,0 +1,1 @@
+package com.tripmateai.service; import com.tripmateai.dto.request.user.UpdateProfileRequest; import com.tripmateai.dto.response.user.UserProfileResponse; public interface UserService {UserProfileResponse getCurrentUser(); UserProfileResponse updateProfile(UpdateProfileRequest request);}

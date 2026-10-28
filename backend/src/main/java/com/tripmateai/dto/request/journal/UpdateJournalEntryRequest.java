@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.journal; import jakarta.validation.constraints.*; import java.time.*; public record UpdateJournalEntryRequest(@NotNull LocalDate journalDate,@NotBlank @Size(max=250) String title,@NotBlank @Size(max=10000) String content) {}

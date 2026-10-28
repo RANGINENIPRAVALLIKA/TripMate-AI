@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.booking; import com.tripmateai.enums.*; import java.math.*; import java.time.*; public record BookingResponse(Long id,BookingType type,BookingStatus status,String provider,String bookingReference,LocalDateTime startAt,LocalDateTime endAt,BigDecimal amount,String currency,String documentUrl) {}

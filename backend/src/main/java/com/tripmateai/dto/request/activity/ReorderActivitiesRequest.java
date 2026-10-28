@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.activity; import jakarta.validation.constraints.*; import java.util.List; public record ReorderActivitiesRequest(@NotEmpty(message="Activity IDs are required") List<@NotNull @Positive Long> activityIds) {}

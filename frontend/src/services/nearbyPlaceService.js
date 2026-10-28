@@ -1,0 +1,1 @@
+import client,{apiData}from'../api/client';export const nearbyPlaceService={list:(id,category)=>apiData(client.get(`/destinations/${id}/nearby-places`,{params:category?{category}:{}})),get:(id,place)=>apiData(client.get(`/destinations/${id}/nearby-places/${place}`))}

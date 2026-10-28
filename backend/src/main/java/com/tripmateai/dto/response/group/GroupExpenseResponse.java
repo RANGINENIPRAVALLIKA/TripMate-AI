@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.group; import java.math.*; import java.util.*; public record GroupExpenseResponse(Long id,String description,BigDecimal amount,Long paidByMemberId,List<ShareResponse> shares){public record ShareResponse(Long memberId,BigDecimal amount) {}}

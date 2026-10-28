@@ -1,0 +1,4 @@
+package com.tripmateai.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*; import java.time.LocalDateTime;
+@Entity @Table(name="password_reset_tokens",uniqueConstraints=@UniqueConstraint(name="uk_password_reset_tokens_token",columnNames="token"),indexes=@Index(name="idx_password_reset_user",columnList="user_id")) @Getter @Setter @NoArgsConstructor @EqualsAndHashCode(callSuper=true,onlyExplicitlyIncluded=true) @ToString
+public class PasswordResetToken extends BaseEntity { @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id",nullable=false) @ToString.Exclude private User user; @NotBlank @Size(max=512) @Column(nullable=false,unique=true,length=512) private String token; @NotNull @Column(name="expires_at",nullable=false) private LocalDateTime expiresAt; @Column(name="used_at") private LocalDateTime usedAt; }

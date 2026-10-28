@@ -1,0 +1,1 @@
+export default function RatingStars({value=0,onChange,disabled=false}){return <span className="stars">{[1,2,3,4,5].map(n=><button key={n} type="button" disabled={disabled||!onChange} className={n<=value?'star on':'star'} onClick={()=>onChange?.(n)} aria-label={`${n} star${n>1?'s':''}`}>★</button>)}</span>}

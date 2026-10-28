@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.destination; import java.math.BigDecimal; public record DestinationResponse(Long id,String city,String state,String country,String description,String imageUrl,String bestSeason,BigDecimal averageBudget,BigDecimal latitude,BigDecimal longitude) {}

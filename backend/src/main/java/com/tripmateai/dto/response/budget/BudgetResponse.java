@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.budget; import java.math.BigDecimal; public record BudgetResponse(Long id,Long tripId,BigDecimal totalBudget,BigDecimal allocatedAmount,BigDecimal spentAmount,String currency) {}

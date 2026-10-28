@@ -1,0 +1,1 @@
+package com.tripmateai.dto.request.destination; import jakarta.validation.constraints.*; public record DestinationSearchRequest(@Size(max=120) String city,@Size(max=120) String country,@Size(max=100) String bestSeason) {}

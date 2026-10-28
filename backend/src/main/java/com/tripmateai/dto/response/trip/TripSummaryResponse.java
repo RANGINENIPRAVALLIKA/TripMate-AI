@@ -1,0 +1,1 @@
+package com.tripmateai.dto.response.trip; import com.tripmateai.enums.TripStatus; import java.time.LocalDate; public record TripSummaryResponse(Long id,String tripName,String destination,LocalDate startDate,LocalDate endDate,TripStatus status) {}

@@ -1,0 +1,1 @@
+package com.tripmateai.service; import com.tripmateai.dto.request.budget.*; import com.tripmateai.dto.response.budget.*; public interface BudgetService {BudgetResponse create(Long tripId,BudgetRequest request);BudgetResponse get(Long tripId);BudgetResponse update(Long tripId,UpdateBudgetRequest request);void delete(Long tripId);BudgetSummaryResponse summary(Long tripId);}

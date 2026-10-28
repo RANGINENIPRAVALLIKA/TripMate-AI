@@ -1,0 +1,1 @@
+package com.tripmateai.repository; import com.tripmateai.entity.*; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface PackingChecklistRepository extends JpaRepository<PackingChecklist,Long> { Optional<PackingChecklist> findByTripAndUser(Trip trip,User user); }

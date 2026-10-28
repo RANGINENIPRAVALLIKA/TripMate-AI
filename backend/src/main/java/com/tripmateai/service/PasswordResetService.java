@@ -1,0 +1,1 @@
+package com.tripmateai.service; import com.tripmateai.dto.request.auth.*; public interface PasswordResetService {String create(ForgotPasswordRequest r);void reset(ResetPasswordRequest r);void change(ChangePasswordRequest r);}
